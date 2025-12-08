@@ -283,6 +283,12 @@ header li:hover {
   box-sizing: border-box;
   background-color: white;
 }
+.con03 li:nth-child(1n):hover {
+  border: 3px solid olivedrab;
+}
+.con03 li:nth-child(2n):hover {
+  border: 3px solid rgb(56, 56, 247);
+}
 .con03 li img {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
