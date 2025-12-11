@@ -11,7 +11,8 @@ a {
   display: block;
 }
 body {
-  height: 3000px;
+  /* height: 3000px; */
+  background-color: bisque;
 }
 .wrap {
   width: 1200px;
@@ -20,7 +21,7 @@ body {
 
 /*header*/
 header {
-  width: 1200px;
+  width: 100%;
   position: fixed;
   left: 50%;
   top: 0px;
@@ -82,8 +83,8 @@ header li:hover {
 /*#container .con01*/
 #container {
   width: 1200px;
-  /* padding: 70px 0px; */
   box-sizing: border-box;
+  margin-top: 100px;
 }
 #container .con01 {
   width: 100%;
@@ -91,19 +92,21 @@ header li:hover {
   justify-content: center;
   gap: 10px;
   background-color: rgba(238, 190, 127);
+  overflow: hidden;
 }
-.con01 a:hover {
-  color: gray;
-}
+
 .con01 .left {
   width: 300px;
-  background-color: green;
+  background-color: rgba(100, 52, 52, 0.923);
+  padding: 30px 0px;
+  box-sizing: border-box;
 }
 .con01 .inner {
   padding-left: 10px;
 }
 .con01 .left h2 {
   font-size: 65px;
+  color: #fff;
 }
 .con01 .left .story {
   margin-left: 50px;
@@ -114,19 +117,27 @@ header li:hover {
   font-weight: bold;
   color: red;
 }
-
+.con01 .left ul {
+  padding-top: 30px;
+  box-sizing: border-box;
+}
 .con01 .left li {
   margin: 30px 0px;
   font-size: 30px;
+  color: #fff;
 }
-.con01 .left p {
-  font-size: 17px;
+
+.con01 .left li:hover {
+  color: gray;
 }
-.con01 .menu h4 {
-  width: 170px;
-  font-size: 30px;
-  border-bottom: 3px solid black;
+
+.left ul li a.active {
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid red;
 }
+
 .con01 .right {
   display: flex;
   align-items: center;
@@ -142,9 +153,21 @@ header li:hover {
   background-position: center bottom;
   cursor: pointer;
 }
+
 .con01 .right li:hover {
   transform: scale(1.03);
 }
+
+.con01 .right .one:hover {
+  transform: scale(1);
+}
+.con01 .right .two,
+.con01 .right .three,
+.con01 .right .four,
+.con01 .right .five {
+  margin-top: 0px; /* 이 한 줄만 바꿔주면 됨 */
+}
+
 .con01 .right .one {
   width: 400px;
   height: 400px;
@@ -156,47 +179,66 @@ header li:hover {
 }
 .con01 .right .two {
   background-image: url(../img/menu_deli2.jpg);
-  margin-top: 250px;
 }
 .con01 .right .three {
   background-image: url(../img/menu_deli3.jpg);
-  margin-top: 250px;
 }
 .con01 .right .four {
   background-image: url(../img/menu_deli4.jpg);
-  margin-top: 250px;
 }
 .con01 .right .five {
   background-image: url(../img/menu_deli5.jpg);
-  margin-top: 250px;
 }
 .con01 .right .txt {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 330px;
   line-height: 50px;
   background-color: black;
   color: white;
   position: absolute;
   left: 50%;
   bottom: -10%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
 }
 
 .con01 .right p {
   margin: 0px 30px 0px 30px;
 }
 
+.con01 .right .txt button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.btn-left {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-right {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*#container .con02*/
 #container .con02 {
-  width: 1200px;
-  padding: 70px;
+  width: 100%;
+  padding: 70px 0px;
   box-sizing: border-box;
-  background-color: rgba(246, 232, 214);
+  background-color: bisque;
 }
 .con02 ul {
-  width: 1100px;
+  width: 100%;
   display: flex;
   justify-content: center;
   color: white;
@@ -217,16 +259,16 @@ header li:hover {
 }
 
 .con02 .search {
-  width: 450px;
+  width: 600px;
   height: 459.77px;
-  background-image: url(../img/MAMMOTH_02.png);
+  background-image: url(../img/MAMMOTH_02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 20px 0px 0px 100px;
 }
 .con02 img {
-  width: 650px;
+  width: 600px;
   height: 479.77px;
   object-fit: cover;
   display: block;
@@ -242,10 +284,10 @@ header li:hover {
   font-size: 45px;
 }
 .con02 .box {
+  width: 250px;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 250px;
   border: 1px solid white;
   padding: 15px;
 }
@@ -262,7 +304,7 @@ header li:hover {
 .con03 {
   width: 100%;
   margin: 0px auto;
-  background-color: rgba(246, 232, 214);
+  background-color: bisque;
   padding: 0px 0px 70px 0px;
   position: relative;
   box-sizing: border-box;
